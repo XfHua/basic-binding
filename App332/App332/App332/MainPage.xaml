@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App332.MainPage">
+
+
+    <StackLayout Orientation="Vertical">
+
+        <Stepper x:Name="stepper" ValueChanged="stepper_ValueChanged"/>
+
+        <Label Text="{Binding Source={x:Reference stepper}, Path=Value}" HorizontalOptions="Center"/>
+
+        <Label x:Name="labelTotal" Text="{Binding ShoppingCartItemTotals}" TextColor="Red" HorizontalTextAlignment="Center" FontAttributes="Bold" WidthRequest="110" />
+
+    </StackLayout>
+
+
+</ContentPage>
